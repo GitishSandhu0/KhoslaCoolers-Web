@@ -1,34 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 
-const coolers = [
-  '/assets/CATALOUGE 1-f.jpg',
-  '/assets/CATALOUGE 8-f.jpg',
-  '/assets/CATALOUGE 9-f.jpg',
-  '/assets/CATALOUGE 11-f.jpg',
-  '/assets/CATALOUGE 2-f.jpg',
-];
+import averestLogo from '../assets/averest-logo.jpg';
+import kcLogo from '../assets/kc-logo.png';
 
-const almirahs = [
-  '/assets/catalouge Almirah/1.png',
-  '/assets/catalouge Almirah/2.png',
-  '/assets/catalouge Almirah/3.png',
-  '/assets/catalouge Almirah/4.png',
-  '/assets/catalouge Almirah/5.png',
-  '/assets/catalouge Almirah/6.png',
-  '/assets/catalouge Almirah/7.png',
-  '/assets/catalouge Almirah/8.png',
-  '/assets/catalouge Almirah/9.png',
-  '/assets/catalouge Almirah/10.png',
-  '/assets/catalouge Almirah/11.png',
-];
+import cooler1 from '../assets/CATALOUGE 1-f.jpg';
+import cooler8 from '../assets/CATALOUGE 8-f.jpg';
+import cooler9 from '../assets/CATALOUGE 9-f.jpg';
+import cooler11 from '../assets/CATALOUGE 11-f.jpg';
+import cooler2 from '../assets/CATALOUGE 2-f.jpg';
+
+const coolers = [cooler1, cooler8, cooler9, cooler11, cooler2];
+
+import a1 from '../assets/catalouge Almirah/1.png';
+import a2 from '../assets/catalouge Almirah/2.png';
+import a3 from '../assets/catalouge Almirah/3.png';
+import a4 from '../assets/catalouge Almirah/4.png';
+import a5 from '../assets/catalouge Almirah/5.png';
+import a6 from '../assets/catalouge Almirah/6.png';
+import a7 from '../assets/catalouge Almirah/7.png';
+import a8 from '../assets/catalouge Almirah/8.png';
+import a9 from '../assets/catalouge Almirah/9.png';
+import a10 from '../assets/catalouge Almirah/10.png';
+import a11 from '../assets/catalouge Almirah/11.png';
+
+const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 ---
 
 <Layout>
 	<header class="navbar">
 		<div class="nav-container">
 			<div class="brand">
-				<img src="/assets/averest-logo.jpg" alt="Averest Logo" class="nav-logo" />
+				<Image src={averestLogo} alt="Averest Logo - Khosla Coolers Brand" class="nav-logo" width={200} />
 				<span class="brand-name">Khosla Coolers Pvt. Ltd.</span>
 			</div>
 			<button class="mobile-menu-btn" id="menu-btn" aria-label="Toggle Menu">
@@ -90,8 +94,8 @@ const almirahs = [
 			<h2>Our Coolers Collection</h2>
 			<div class="product-grid">
 				{coolers.map((img, index) => (
-					<div class="product-card" data-src={encodeURI(img)} data-index={`cooler-${index}`}>
-						<img src={encodeURI(img)} alt="Cooler" loading="lazy" class="lightbox-trigger" />
+					<div class="product-card" data-src={img.src} data-index={`cooler-${index}`}>
+						<Image src={img} alt={`High-performance Khosla Cooler model ${index + 1}`} loading="lazy" class="lightbox-trigger" width={600} />
 					</div>
 				))}
 			</div>
@@ -101,8 +105,8 @@ const almirahs = [
 			<h2>Our Almirah Collection</h2>
 			<div class="product-grid">
 				{almirahs.map((img, index) => (
-					<div class="product-card" data-src={encodeURI(img)} data-index={`almirah-${index}`}>
-						<img src={encodeURI(img)} alt="Almirah" loading="lazy" class="lightbox-trigger" />
+					<div class="product-card" data-src={img.src} data-index={`almirah-${index}`}>
+						<Image src={img} alt={`Premium heavy-duty Almirah model ${index + 1}`} loading="lazy" class="lightbox-trigger" width={600} />
 					</div>
 				))}
 			</div>
@@ -161,7 +165,7 @@ const almirahs = [
 	<footer class="footer">
 		<div class="footer-container">
 			<div class="footer-column brand-column">
-				<img src="/assets/kc-logo.png" alt="Khosla Coolers Pvt. Ltd. Logo" class="footer-logo" />
+				<Image src={kcLogo} alt="Khosla Coolers Pvt. Ltd. Logo" class="footer-logo" width={250} />
 				<p style="font-weight: bold; margin-bottom: 0.5rem; font-size: 1.2rem;">Khosla Coolers Pvt. Ltd.</p>
 				<p class="footer-tagline">Delivering you the best quality since 1996.</p>
 			</div>
@@ -254,7 +258,9 @@ const almirahs = [
 	}
 
 	.nav-logo {
-		height: 40px;
+		height: 48px;
+		width: auto;
+		object-fit: contain;
 		border-radius: 4px;
 	}
 

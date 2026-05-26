@@ -58,7 +58,7 @@ const almirahs = [
 		<section id="about-us" class="about-section">
 			<div class="about-header">
 				<span class="section-subtitle">About Us</span>
-				<h2>Khosla Coolers Private Limited</h2>
+				<h2><span class="kc-bold">Khosla Coolers</span> <span class="kc-regular">Private Limited</span></h2>
 			</div>
 			<div class="about-content">
 				<div class="about-text">
@@ -239,7 +239,7 @@ const almirahs = [
 	.nav-container {
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 1rem;
+		padding: 0.75rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -260,7 +260,7 @@ const almirahs = [
 
 	.brand-name {
 		font-size: 1.5rem;
-		font-weight: 700;
+		font-weight: 800;
 	}
 
 	.nav-links {
@@ -338,8 +338,8 @@ const almirahs = [
 
 	@media (max-width: 768px) {
 		.brand-name {
-			font-size: calc(1.5rem - 2px);
-			font-weight: 800;
+			font-size: 1.4rem;
+			font-weight: 1000;
 		}
 
 		.mobile-menu-btn {
@@ -374,20 +374,11 @@ const almirahs = [
 		}
 		
 		.hero-section p {
-			font-weight: 600;
+			font-weight: 400;
 		}
 		
 		.category-section h2 {
 			font-weight: 800;
-		}
-
-		.about-content {
-			grid-template-columns: 1fr;
-			gap: 2rem;
-		}
-
-		.about-header h2 {
-			font-size: calc(1.5rem + 6px);
 		}
 
 		.tagline-section {
@@ -535,6 +526,48 @@ const almirahs = [
 		background: #eff6ff;
 		padding: 4px;
 		border-radius: 50%;
+	}
+
+	@media (max-width: 768px) {
+		.about-section {
+			padding: 1.5rem 0;
+			margin-bottom: 2rem;
+		}
+
+		.about-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.about-header {
+			margin-bottom: 2rem;
+		}
+
+		.about-header h2 {
+			font-size: calc(1.5rem + 6px);
+		}
+
+		.kc-bold {
+			font-weight: 1000;
+			font-size: 2.5rem;
+			display: block;
+		}
+
+		.kc-regular {
+			font-weight: normal;
+			display: block;
+			font-size: 1.25rem;
+			margin-top: 0.25rem;
+		}
+
+		.about-text h3 {
+			font-size: 1.5rem;
+			font-weight: 800;
+		}
+
+		.trust-factors {
+			padding: 1.5rem;
+		}
 	}
 
 	.product-grid {

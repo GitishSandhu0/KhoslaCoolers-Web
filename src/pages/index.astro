@@ -1,11 +1,659 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const coolers = [
+  '/assets/CATALOUGE 1-f.jpg',
+  '/assets/CATALOUGE 8-f.jpg',
+  '/assets/CATALOUGE 9-f.jpg',
+  '/assets/CATALOUGE 11-f.jpg',
+  '/assets/CATALOUGE 2-f.jpg',
+];
+
+const almirahs = [
+  '/assets/catalouge Almirah/1.png',
+  '/assets/catalouge Almirah/2.png',
+  '/assets/catalouge Almirah/3.png',
+  '/assets/catalouge Almirah/4.png',
+  '/assets/catalouge Almirah/5.png',
+  '/assets/catalouge Almirah/6.png',
+  '/assets/catalouge Almirah/7.png',
+  '/assets/catalouge Almirah/8.png',
+  '/assets/catalouge Almirah/9.png',
+  '/assets/catalouge Almirah/10.png',
+  '/assets/catalouge Almirah/11.png',
+];
 ---
 
 <Layout>
-	<Welcome />
+	<header class="navbar">
+		<div class="nav-container">
+			<div class="brand">
+				<img src="/assets/averest-logo.jpg" alt="Averest Logo" class="nav-logo" />
+				<span class="brand-name">Khosla Coolers Pvt. Ltd.</span>
+			</div>
+			<button class="mobile-menu-btn" id="menu-btn" aria-label="Toggle Menu">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+			</button>
+			<nav class="nav-links" id="nav-links">
+				<a href="#" class="nav-link">Home</a>
+				<a href="#coolers" class="nav-link">Coolers</a>
+				<a href="#almirahs" class="nav-link">Almirahs</a>
+				<a href="#locate-us" class="nav-link">Locate Us</a>
+				<a href="#contact-us" class="nav-link">Contact</a>
+			</nav>
+		</div>
+	</header>
+
+	<section class="hero-section">
+		<h1>Premium Quality Almirahs & Coolers</h1>
+		<p>Discover our wide range of durable and stylish products designed for your comfort and storage needs.</p>
+	</section>
+
+	<section class="tagline-section">
+		<p>Delivering you the best quality since <span style="color: #ffd700;">1996</span>.</p>
+	</section>
+
+	<main class="container">
+		<section id="coolers" class="category-section">
+			<h2>Our Coolers Collection</h2>
+			<div class="product-grid">
+				{coolers.map((img, index) => (
+					<div class="product-card" data-src={encodeURI(img)} data-index={`cooler-${index}`}>
+						<img src={encodeURI(img)} alt="Cooler" loading="lazy" class="lightbox-trigger" />
+					</div>
+				))}
+			</div>
+		</section>
+
+		<section id="almirahs" class="category-section">
+			<h2>Our Almirah Collection</h2>
+			<div class="product-grid">
+				{almirahs.map((img, index) => (
+					<div class="product-card" data-src={encodeURI(img)} data-index={`almirah-${index}`}>
+						<img src={encodeURI(img)} alt="Almirah" loading="lazy" class="lightbox-trigger" />
+					</div>
+				))}
+			</div>
+		</section>
+
+		<section id="locate-us" class="category-section">
+			<h2>Locate Us</h2>
+			<div class="map-container" style="width: 100%; max-width: 1200px; margin: 0 auto; padding-top: 1rem;">
+				<iframe 
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2026.5680780510456!2d75.61673233938126!3d31.323980228920394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a287b793fcd%3A0xd8b624be2ae6a371!2sKhosla%20Coolers%20pvt%20ltd!5e0!3m2!1sen!2sin!4v1779813177941!5m2!1sen!2sin" 
+					width="100%" 
+					height="400" 
+					style="border:0; border-radius: 8px;" 
+					allowfullscreen="" 
+					loading="lazy" 
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+		</section>
+
+		<section id="contact-us" class="category-section" style="text-align: center;">
+			<h2>Contact Us</h2>
+			<div style="font-size: 1.1rem; line-height: 1.8; margin-top: 1rem;">
+				<p>
+					<strong>Phone:</strong> 
+					<a href="tel:+919876543210" class="contact-link">+91 98765 43210</a>, 
+					<a href="tel:+919876543211" class="contact-link">+91 98765 43211</a>
+				</p>
+				<p>
+					<strong>Email:</strong> 
+					<a href="mailto:info@khoslacoolers.com" class="contact-link">info@khoslacoolers.com</a>
+				</p>
+			</div>
+		</section>
+	</main>
+
+	<!-- Lightbox Overlay -->
+	<div id="lightbox" aria-hidden="true" role="dialog">
+		<button class="lightbox-close" aria-label="Close lightbox">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+		</button>
+		
+		<button class="lightbox-nav lightbox-prev" aria-label="Previous image">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+		</button>
+		
+		<img id="lightbox-img" src="" alt="Enlarged view" />
+		
+		<button class="lightbox-nav lightbox-next" aria-label="Next image">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+		</button>
+		
+		<div class="lightbox-counter"><span id="lightbox-current">1</span> / <span id="lightbox-total">1</span></div>
+	</div>
+
+	<footer class="footer">
+		<div class="footer-content" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+			<img src="/assets/kc-logo.png" alt="Khosla Coolers Pvt. Ltd. Logo" style="height: 60px; object-fit: contain; background-color: white; padding: 0.5rem; border-radius: 8px;" />
+			<p>&copy; {new Date().getFullYear()} Khosla Coolers Pvt. Ltd. All rights reserved | Website developed and managed by <a href="https://thinkshift.in/web" target="_blank" rel="noopener noreferrer" class="footer-link">ThinkShift Interactive</a></p>
+		</div>
+	</footer>
+
+	<!-- WhatsApp Chat Button -->
+	<a href="https://wa.me/919988483111" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+		<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+			<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+		</svg>
+	</a>
 </Layout>
+
+<style>
+	:root {
+		--primary: #1e3a8a;
+		--secondary: #3b82f6;
+		--bg: #f8fafc;
+		--text: #0f172a;
+		--card-bg: #ffffff;
+	}
+
+	body {
+		background-color: var(--bg);
+		color: var(--text);
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	}
+
+	.navbar {
+		background-color: var(--card-bg);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		position: sticky;
+		top: 0;
+		z-index: 50;
+	}
+
+	.nav-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.brand {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		text-decoration: none;
+		color: var(--primary);
+	}
+
+	.nav-logo {
+		height: 40px;
+		border-radius: 4px;
+	}
+
+	.brand-name {
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+	}
+
+	.nav-link {
+		color: var(--text);
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.2s;
+	}
+
+	.nav-link:hover {
+		color: var(--secondary);
+	}
+
+	.mobile-menu-btn {
+		display: none;
+		background: none;
+		border: none;
+		color: var(--text);
+		cursor: pointer;
+		padding: 0.5rem;
+	}
+
+	.hero-section {
+		background-color: var(--primary);
+		color: white;
+		padding: 4rem 1rem;
+		text-align: center;
+	}
+
+	.hero-section h1 {
+		margin: 0;
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.hero-section p {
+		margin: 0 auto;
+		font-size: 1.2rem;
+		opacity: 0.9;
+		max-width: 600px;
+	}
+
+	.tagline-section {
+		background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 50%, #1e3a8a 100%);
+		color: white;
+		padding: 1.5rem;
+		text-align: center;
+		font-size: 1.25rem;
+		font-weight: 600;
+		font-style: italic;
+		letter-spacing: 1px;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+		position: relative;
+		z-index: 10;
+	}
+	.tagline-section p {
+		margin: 0;
+		text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+		display: inline-block;
+	}
+	.tagline-section p::before,
+	.tagline-section p::after {
+		content: '✦';
+		color: #93c5fd;
+		font-size: 1rem;
+		margin: 0 1rem;
+		vertical-align: middle;
+	}
+
+	@media (max-width: 768px) {
+		.brand-name {
+			font-size: calc(1.5rem - 2px);
+			font-weight: 800;
+		}
+
+		.mobile-menu-btn {
+			display: block;
+		}
+
+		.nav-links {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background-color: var(--card-bg);
+			flex-direction: column;
+			padding: 1.5rem 1rem;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			gap: 1rem;
+		}
+
+		.nav-links.active {
+			display: flex;
+		}
+
+		.nav-link {
+			font-weight: 700;
+			font-size: 1.1rem;
+		}
+
+		.hero-section h1 {
+			font-size: 2rem;
+			font-weight: 800;
+		}
+		
+		.hero-section p {
+			font-weight: 600;
+		}
+		
+		.category-section h2 {
+			font-weight: 800;
+		}
+
+		.tagline-section {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 1.5rem 1rem;
+		}
+
+		.tagline-section p {
+			flex: 1;
+			margin: 0 0.5rem;
+		}
+
+		.tagline-section p::before,
+		.tagline-section p::after {
+			content: none;
+		}
+
+		.tagline-section::before,
+		.tagline-section::after {
+			content: '✦';
+			color: #93c5fd;
+			font-size: 1.2rem;
+			flex-shrink: 0;
+		}
+	}
+
+	.contact-link {
+		color: var(--primary);
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.2s;
+	}
+
+	.contact-link:hover {
+		color: var(--secondary);
+		text-decoration: underline;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+
+	.category-section {
+		margin-bottom: 4rem;
+	}
+
+	.category-section h2 {
+		font-size: 2rem;
+		color: var(--primary);
+		border-bottom: 2px solid var(--secondary);
+		padding-bottom: 0.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.product-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.product-card {
+		background-color: var(--card-bg);
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.product-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+	}
+
+	.product-card img {
+		width: 100%;
+		height: auto;
+		display: block;
+		transition: filter 0.3s ease;
+	}
+
+	.product-card:hover img {
+		filter: brightness(0.9);
+	}
+
+	/* Lightbox Styles */
+	#lightbox {
+		position: fixed;
+		inset: 0;
+		background-color: rgba(0, 0, 0, 0.9);
+		z-index: 999;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease;
+		backdrop-filter: blur(5px);
+	}
+
+	#lightbox.active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	#lightbox-img {
+		max-width: 90vw;
+		max-height: 85vh;
+		object-fit: contain;
+		border-radius: 8px;
+		box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.5);
+		transform: scale(0.95);
+		transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+
+	#lightbox.active #lightbox-img {
+		transform: scale(1);
+	}
+
+	.lightbox-close {
+		position: absolute;
+		top: 1.5rem;
+		right: 1.5rem;
+		background: rgba(255, 255, 255, 0.2);
+		color: white;
+		border: none;
+		border-radius: 50%;
+		width: 44px;
+		height: 44px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: background-color 0.2s, transform 0.2s;
+	}
+
+	.lightbox-close:hover {
+		background: rgba(255, 255, 255, 0.3);
+		transform: scale(1.1);
+	}
+
+	.lightbox-close svg {
+		width: 24px;
+		height: 24px;
+	}
+
+	.lightbox-nav {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background: rgba(255, 255, 255, 0.1);
+		color: white;
+		border: none;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: background-color 0.2s, transform 0.2s;
+		opacity: 0.7;
+		z-index: 10;
+	}
+
+	@media (max-width: 768px) {
+		.lightbox-nav {
+			width: 40px;
+			height: 40px;
+		}
+		
+		.lightbox-close {
+			top: 1rem;
+			right: 1rem;
+			width: 36px;
+			height: 36px;
+		}
+	}
+
+	.lightbox-nav:hover {
+		background: rgba(255, 255, 255, 0.3);
+		opacity: 1;
+		transform: translateY(-50%) scale(1.1);
+	}
+
+	.lightbox-prev {
+		left: 1rem;
+	}
+
+	.lightbox-next {
+		right: 1rem;
+	}
+
+	.lightbox-counter {
+		position: absolute;
+		bottom: 1.5rem;
+		color: white;
+		background: rgba(0, 0, 0, 0.5);
+		padding: 0.5rem 1rem;
+		border-radius: 9999px;
+		font-size: 0.875rem;
+		letter-spacing: 0.05em;
+	}
+
+	.footer {
+		text-align: center;
+		padding: 2rem;
+		background-color: var(--primary);
+		color: white;
+		margin-top: auto;
+	}
+
+	.footer-link {
+		color: #93c5fd;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+
+	.footer-link:hover {
+		color: white;
+		text-decoration: underline;
+	}
+
+	.whatsapp-btn {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		background-color: #25D366;
+		color: white;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+		z-index: 1000;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.whatsapp-btn:hover {
+		transform: scale(1.1);
+		box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Mobile Menu
+		const menuBtn = document.getElementById('menu-btn');
+		const navLinks = document.getElementById('nav-links');
+
+		if (menuBtn && navLinks) {
+			menuBtn.addEventListener('click', () => {
+				navLinks.classList.toggle('active');
+			});
+			
+			// Close menu when clicking a link
+			navLinks.querySelectorAll('a').forEach(link => {
+				link.addEventListener('click', () => {
+					navLinks.classList.remove('active');
+				});
+			});
+		}
+
+		// Lightbox
+		const lightbox = document.getElementById('lightbox');
+		const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+		const closeBtn = document.querySelector('.lightbox-close');
+		const prevBtn = document.querySelector('.lightbox-prev');
+		const nextBtn = document.querySelector('.lightbox-next');
+		const currentCounter = document.getElementById('lightbox-current');
+		const totalCounter = document.getElementById('lightbox-total');
+		
+		const cards = document.querySelectorAll('.product-card');
+		let galleryItems: string[] = [];
+		let currentIndex = 0;
+
+		// Populate gallery items
+		cards.forEach(card => {
+			const src = card.getAttribute('data-src');
+			if (src) galleryItems.push(src);
+		});
+
+		if (totalCounter) {
+			totalCounter.textContent = galleryItems.length.toString();
+		}
+
+		function openLightbox(index: number) {
+			currentIndex = index;
+			updateLightbox();
+			lightbox?.classList.add('active');
+			document.body.style.overflow = 'hidden'; // Prevent scrolling
+		}
+
+		function closeLightbox() {
+			lightbox?.classList.remove('active');
+			document.body.style.overflow = '';
+			// Slight delay before clearing src for smooth transition
+			setTimeout(() => { if (lightboxImg) lightboxImg.src = ''; }, 300);
+		}
+
+		function updateLightbox() {
+			if (lightboxImg && currentCounter) {
+				lightboxImg.src = galleryItems[currentIndex];
+				currentCounter.textContent = (currentIndex + 1).toString();
+			}
+		}
+
+		function nextImage() {
+			currentIndex = (currentIndex + 1) % galleryItems.length;
+			updateLightbox();
+		}
+
+		function prevImage() {
+			currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+			updateLightbox();
+		}
+
+		cards.forEach((card, index) => {
+			card.addEventListener('click', () => openLightbox(index));
+		});
+
+		closeBtn?.addEventListener('click', closeLightbox);
+		nextBtn?.addEventListener('click', (e) => { e.stopPropagation(); nextImage(); });
+		prevBtn?.addEventListener('click', (e) => { e.stopPropagation(); prevImage(); });
+
+		// Close on clicking outside the image
+		lightbox?.addEventListener('click', (e) => {
+			if (e.target === lightbox) {
+				closeLightbox();
+			}
+		});
+
+		// Keyboard navigation
+		document.addEventListener('keydown', (e) => {
+			if (!lightbox?.classList.contains('active')) return;
+			
+			if (e.key === 'Escape') closeLightbox();
+			if (e.key === 'ArrowRight') nextImage();
+			if (e.key === 'ArrowLeft') prevImage();
+		});
+	});
+</script>

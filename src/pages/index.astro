@@ -1,30 +1,33 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
 
-import averestLogo from '../assets/averest-logo.jpg';
-import kcLogo from '../assets/kc-logo.png';
+import averestLogo from "../assets/averest-logo.jpg";
+import kcLogo from "../assets/kc-logo.png";
+import kcLogo2 from "../assets/kc-logo2.png";
 
-import cooler1 from '../assets/CATALOUGE 1-f.jpg';
-import cooler8 from '../assets/CATALOUGE 8-f.jpg';
-import cooler9 from '../assets/CATALOUGE 9-f.jpg';
-import cooler10 from '../assets/CATALOUGE 10-f.jpg';
-import cooler11 from '../assets/CATALOUGE 11-f.jpg';
-import cooler2 from '../assets/CATALOUGE 2-f.jpg';
+import cooler1 from "../assets/CATALOUGE 1-f.jpg";
+import cooler8 from "../assets/CATALOUGE 8-f.jpg";
+import cooler9 from "../assets/CATALOUGE 9-f.jpg";
+import cooler10 from "../assets/CATALOUGE 10-f.jpg";
+import cooler11 from "../assets/CATALOUGE 11-f.jpg";
+import cooler2 from "../assets/CATALOUGE 2-f.jpg";
+
+import hero from "../assets/hero.png";
 
 const coolers = [cooler1, cooler8, cooler9, cooler10, cooler11, cooler2];
 
-import a1 from '../assets/catalouge Almirah/1.png';
-import a2 from '../assets/catalouge Almirah/2.png';
-import a3 from '../assets/catalouge Almirah/3.png';
-import a4 from '../assets/catalouge Almirah/4.png';
-import a5 from '../assets/catalouge Almirah/5.png';
-import a6 from '../assets/catalouge Almirah/6.png';
-import a7 from '../assets/catalouge Almirah/7.png';
-import a8 from '../assets/catalouge Almirah/8.png';
-import a9 from '../assets/catalouge Almirah/9.png';
-import a10 from '../assets/catalouge Almirah/10.png';
-import a11 from '../assets/catalouge Almirah/11.png';
+import a1 from "../assets/catalouge Almirah/1.png";
+import a2 from "../assets/catalouge Almirah/2.png";
+import a3 from "../assets/catalouge Almirah/3.png";
+import a4 from "../assets/catalouge Almirah/4.png";
+import a5 from "../assets/catalouge Almirah/5.png";
+import a6 from "../assets/catalouge Almirah/6.png";
+import a7 from "../assets/catalouge Almirah/7.png";
+import a8 from "../assets/catalouge Almirah/8.png";
+import a9 from "../assets/catalouge Almirah/9.png";
+import a10 from "../assets/catalouge Almirah/10.png";
+import a11 from "../assets/catalouge Almirah/11.png";
 
 const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 ---
@@ -33,11 +36,36 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 	<header class="navbar">
 		<div class="nav-container">
 			<div class="brand">
-				<Image src={averestLogo} alt="Averest Logo - Khosla Coolers Brand" class="nav-logo" width={200} />
+				<Image
+					src={kcLogo2}
+					alt="Averest Logo - Khosla Coolers Brand"
+					class="nav-logo"
+					width={200}
+				/>
 				<span class="brand-name">Khosla Coolers Pvt. Ltd.</span>
 			</div>
-			<button class="mobile-menu-btn" id="menu-btn" aria-label="Toggle Menu">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+			<button
+				class="mobile-menu-btn"
+				id="menu-btn"
+				aria-label="Toggle Menu"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					><line x1="3" y1="12" x2="21" y2="12"></line><line
+						x1="3"
+						y1="6"
+						x2="21"
+						y2="6"></line><line x1="3" y1="18" x2="21" y2="18"
+					></line></svg
+				>
 			</button>
 			<nav class="nav-links" id="nav-links">
 				<a href="#" class="nav-link">Home</a>
@@ -50,40 +78,135 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 		</div>
 	</header>
 
-	<section class="hero-section">
-		<h1>Premium Quality Coolers & Almirahs</h1>
-		<p>Discover our wide range of durable and stylish products designed for your comfort and storage needs.</p>
+	<section
+		class="hero-section"
+		style={`background-image: linear-gradient(rgba(234, 37, 40, 0.7), rgba(0, 0, 0, 0.6)), url('${hero.src}');`}
+	>
+		<div class="hero-content">
+			<h1>Premium Quality Coolers & Almirahs</h1>
+			<p>
+				Discover our wide range of durable and stylish products designed
+				for your comfort and storage needs.
+			</p>
+			<div class="hero-buttons">
+				<a href="tel:+919814831111" class="hero-cta">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="phone-icon"
+						><path
+							d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+						></path></svg
+					>
+					Call Now
+				</a>
+				<a href="#locate-us" class="hero-cta hero-cta-secondary">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						><path
+							d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+						></path><circle cx="12" cy="10" r="3"></circle></svg
+					>
+					Locate Us
+				</a>
+			</div>
+		</div>
 	</section>
 
 	<section class="tagline-section">
-		<p>Delivering you the best quality since <span style="color: #ffd700;">1996</span>.</p>
+		<p>
+			Delivering you the best quality since <span style="color: #ffd700;"
+				>1996</span
+			>.
+		</p>
 	</section>
 
 	<main class="container">
 		<section id="about-us" class="about-section">
 			<div class="about-header">
 				<span class="section-subtitle">About Us</span>
-				<h2><span class="kc-bold">Khosla Coolers</span> <span class="kc-regular">Private Limited</span></h2>
+				<h2>
+					<span class="kc-bold">Khosla Coolers</span>
+					<span class="kc-regular">Private Limited</span>
+				</h2>
 			</div>
 			<div class="about-content">
 				<div class="about-text">
 					<h3>Crafted with Quality. Built on Trust.</h3>
-					<p>We are a premier manufacturer of high-performance air coolers and premium, heavy-duty almirahs. What began as a commitment to reliable home essentials has grown into a legacy of trust, serving generations of families across the country.</p>
+					<p>
+						We are a premier manufacturer of high-performance air
+						coolers and premium, heavy-duty almirahs. What began as
+						a commitment to reliable home essentials has grown into
+						a legacy of trust, serving generations of families
+						across the country.
+					</p>
 				</div>
-				
+
 				<div class="trust-factors">
 					<h4>Why Generations Trust Us</h4>
 					<ul>
 						<li>
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="check-icon" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								class="check-icon"
+								stroke="currentColor"
+								stroke-width="2.5"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								><polyline points="20 6 9 17 4 12"
+								></polyline></svg
+							>
 							<span>Decades of Experience</span>
 						</li>
 						<li>
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="check-icon" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								class="check-icon"
+								stroke="currentColor"
+								stroke-width="2.5"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								><polyline points="20 6 9 17 4 12"
+								></polyline></svg
+							>
 							<span>Uncompromising Quality</span>
 						</li>
 						<li>
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="check-icon" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								class="check-icon"
+								stroke="currentColor"
+								stroke-width="2.5"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								><polyline points="20 6 9 17 4 12"
+								></polyline></svg
+							>
 							<span>Customer-First Values</span>
 						</li>
 					</ul>
@@ -94,51 +217,90 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 		<section id="coolers" class="category-section">
 			<h2>Our Coolers Collection</h2>
 			<div class="product-grid">
-				{coolers.map((img, index) => (
-					<div class="product-card" data-src={img.src} data-index={`cooler-${index}`}>
-						<Image src={img} alt={`High-performance Khosla Cooler model ${index + 1}`} loading="lazy" class="lightbox-trigger" width={600} />
-					</div>
-				))}
+				{
+					coolers.map((img, index) => (
+						<div
+							class="product-card"
+							data-src={img.src}
+							data-index={`cooler-${index}`}
+						>
+							<Image
+								src={img}
+								alt={`High-performance Khosla Cooler model ${index + 1}`}
+								loading="lazy"
+								class="lightbox-trigger"
+								width={600}
+							/>
+						</div>
+					))
+				}
 			</div>
 		</section>
 
 		<section id="almirahs" class="category-section">
 			<h2>Our Almirah Collection</h2>
 			<div class="product-grid">
-				{almirahs.map((img, index) => (
-					<div class="product-card" data-src={img.src} data-index={`almirah-${index}`}>
-						<Image src={img} alt={`Premium heavy-duty Almirah model ${index + 1}`} loading="lazy" class="lightbox-trigger" width={600} />
-					</div>
-				))}
+				{
+					almirahs.map((img, index) => (
+						<div
+							class="product-card"
+							data-src={img.src}
+							data-index={`almirah-${index}`}
+						>
+							<Image
+								src={img}
+								alt={`Premium heavy-duty Almirah model ${index + 1}`}
+								loading="lazy"
+								class="lightbox-trigger"
+								width={600}
+							/>
+						</div>
+					))
+				}
 			</div>
 		</section>
 
 		<section id="locate-us" class="category-section">
 			<h2>Locate Us</h2>
-			<div class="map-container" style="width: 100%; max-width: 1200px; margin: 0 auto; padding-top: 1rem;">
-				<iframe 
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2026.5680780510456!2d75.61673233938126!3d31.323980228920394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a287b793fcd%3A0xd8b624be2ae6a371!2sKhosla%20Coolers%20pvt%20ltd!5e0!3m2!1sen!2sin!4v1779813177941!5m2!1sen!2sin" 
-					width="100%" 
-					height="400" 
-					style="border:0; border-radius: 8px;" 
-					allowfullscreen="" 
-					loading="lazy" 
-					referrerpolicy="no-referrer-when-downgrade">
+			<div
+				class="map-container"
+				style="width: 100%; max-width: 1200px; margin: 0 auto; padding-top: 1rem;"
+			>
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2026.5680780510456!2d75.61673233938126!3d31.323980228920394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a287b793fcd%3A0xd8b624be2ae6a371!2sKhosla%20Coolers%20pvt%20ltd!5e0!3m2!1sen!2sin!4v1779813177941!5m2!1sen!2sin"
+					width="100%"
+					height="400"
+					style="border:0; border-radius: 8px;"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+				>
 				</iframe>
 			</div>
 		</section>
 
-		<section id="contact-us" class="category-section" style="text-align: center;">
+		<section
+			id="contact-us"
+			class="category-section"
+			style="text-align: center;"
+		>
 			<h2>Contact Us</h2>
 			<div style="font-size: 1.1rem; line-height: 1.8; margin-top: 1rem;">
 				<p>
-					<strong>Phone:</strong> 
-					<a href="tel:+919814831111" class="contact-link">+91 98148 31111</a>, 
-					<a href="tel:+919592531111" class="contact-link">+91 95925 31111</a>
+					<strong>Phone:</strong>
+					<a href="tel:+919814831111" class="contact-link"
+						>+91 98148 31111</a
+					>,
+					<a href="tel:+919592531111" class="contact-link"
+						>+91 95925 31111</a
+					>
 				</p>
 				<p>
-					<strong>Email:</strong> 
-					<a href="mailto:khosla.coolers@gmail.com" class="contact-link">khosla.coolers@gmail.com</a>
+					<strong>Email:</strong>
+					<a
+						href="mailto:khosla.coolers@gmail.com"
+						class="contact-link">khosla.coolers@gmail.com</a
+					>
 				</p>
 			</div>
 		</section>
@@ -147,30 +309,82 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 	<!-- Lightbox Overlay -->
 	<div id="lightbox" aria-hidden="true" role="dialog">
 		<button class="lightbox-close" aria-label="Close lightbox">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				><line x1="18" y1="6" x2="6" y2="18"></line><line
+					x1="6"
+					y1="6"
+					x2="18"
+					y2="18"></line></svg
+			>
 		</button>
-		
+
 		<button class="lightbox-nav lightbox-prev" aria-label="Previous image">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				><polyline points="15 18 9 12 15 6"></polyline></svg
+			>
 		</button>
-		
+
 		<img id="lightbox-img" src="" alt="Enlarged view" />
-		
+
 		<button class="lightbox-nav lightbox-next" aria-label="Next image">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				><polyline points="9 18 15 12 9 6"></polyline></svg
+			>
 		</button>
-		
-		<div class="lightbox-counter"><span id="lightbox-current">1</span> / <span id="lightbox-total">1</span></div>
+
+		<div class="lightbox-counter">
+			<span id="lightbox-current">1</span> / <span id="lightbox-total"
+				>1</span
+			>
+		</div>
 	</div>
 
 	<footer class="footer">
 		<div class="footer-container">
 			<div class="footer-column brand-column">
-				<Image src={kcLogo} alt="Khosla Coolers Pvt. Ltd. Logo" class="footer-logo" width={250} />
-				<p style="font-weight: bold; margin-bottom: 0.5rem; font-size: 1.2rem;">Khosla Coolers Pvt. Ltd.</p>
-				<p class="footer-tagline">Delivering you the best quality since 1996.</p>
+				<Image
+					src={kcLogo}
+					alt="Khosla Coolers Pvt. Ltd. Logo"
+					class="footer-logo"
+					width={250}
+				/>
+				<p
+					style="font-weight: bold; margin-bottom: 0.5rem; font-size: 1.2rem;"
+				>
+					Khosla Coolers Pvt. Ltd.
+				</p>
+				<p class="footer-tagline">
+					Delivering you the best quality since 1996.
+				</p>
 			</div>
-			
+
 			<div class="footer-column">
 				<h3>Quick Links</h3>
 				<ul class="footer-links-list">
@@ -184,13 +398,20 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 				<h3>Contact Us</h3>
 				<ul class="footer-contact-list">
 					<li>
-						<strong>Phone:</strong><br/>
-						<a href="tel:+919876543210" class="footer-link">+91 98765 43210</a>, 
-						<a href="tel:+919592531111" class="footer-link">+91 95925 31111</a>
+						<strong>Phone:</strong><br />
+						<a href="tel:+919814831111" class="footer-link"
+							>+91 98148 31111</a
+						>,
+						<a href="tel:+919592531111" class="footer-link"
+							>+91 95925 31111</a
+						>
 					</li>
 					<li>
-						<strong>Email:</strong><br/>
-						<a href="mailto:khosla.coolers@gmail.com" class="footer-link">khosla.coolers@gmail.com</a>
+						<strong>Email:</strong><br />
+						<a
+							href="mailto:khosla.coolers@gmail.com"
+							class="footer-link">khosla.coolers@gmail.com</a
+						>
 					</li>
 				</ul>
 			</div>
@@ -198,30 +419,75 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 			<div class="footer-column">
 				<h3>Locate Us</h3>
 				<address class="footer-address">
-					Khosla Coolers Pvt. Ltd.<br/>
-					Ladhewali Road, Near Railway Crossing, Jalandhar, Punjab - 144 009<br/>
-					India<br/>
+					Khosla Coolers Pvt. Ltd.<br />
+					Ladhewali Road, Near Railway Crossing, Jalandhar, Punjab - 144
+					009<br />
+					India<br />
 				</address>
 			</div>
 		</div>
-		
+
 		<div class="footer-bottom">
-			<p>&copy; {new Date().getFullYear()} Khosla Coolers Pvt. Ltd. All rights reserved | Website developed and managed by <a href="https://thinkshift.in/web" target="_blank" rel="noopener noreferrer" class="footer-link">ThinkShift Interactive</a></p>
+			<p>
+				&copy; {new Date().getFullYear()} Khosla Coolers Pvt. Ltd. All rights
+				reserved | Website developed and managed by <a
+					href="https://thinkshift.in/web"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="footer-link">ThinkShift Interactive</a
+				>
+			</p>
 		</div>
 	</footer>
 
 	<!-- WhatsApp Chat Button -->
-	<a href="https://wa.me/919988483111" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
-		<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
-			<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-		</svg>
-	</a>
+	<div class="floating-buttons">
+		<a
+			href="tel:+919814831111"
+			class="floating-btn call-btn"
+			aria-label="Call us"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="28"
+				height="28"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				><path
+					d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+				></path></svg
+			>
+		</a>
+		<a
+			href="https://wa.me/919592531111"
+			class="floating-btn whatsapp-btn"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="Chat with us on WhatsApp"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="30"
+				height="30"
+				fill="currentColor"
+				viewBox="0 0 24 24"
+			>
+				<path
+					d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+				></path>
+			</svg>
+		</a>
+	</div>
 </Layout>
 
 <style>
 	:root {
-		--primary: #1e3a8a;
-		--secondary: #3b82f6;
+		--primary: #ea2528;
+		--secondary: #111827;
 		--bg: #f8fafc;
 		--text: #0f172a;
 		--card-bg: #ffffff;
@@ -230,7 +496,15 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 	body {
 		background-color: var(--bg);
 		color: var(--text);
-		font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+		font-family:
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			"Segoe UI",
+			Roboto,
+			"Helvetica Neue",
+			Arial,
+			sans-serif;
 	}
 
 	.navbar {
@@ -298,26 +572,99 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 
 	.hero-section {
 		background-color: var(--primary);
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
 		color: white;
-		padding: 4rem 1rem;
+		padding: 6rem 1rem;
 		text-align: center;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: 60vh;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 10;
+		max-width: 800px;
 	}
 
 	.hero-section h1 {
 		margin: 0;
-		font-size: 2.5rem;
-		margin-bottom: 1rem;
+		font-size: 3.5rem;
+		font-weight: 800;
+		margin-bottom: 1.5rem;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 	}
 
 	.hero-section p {
-		margin: 0 auto;
-		font-size: 1.2rem;
-		opacity: 0.9;
+		margin: 0 auto 2.5rem auto;
+		font-size: 1.25rem;
+		opacity: 0.95;
 		max-width: 600px;
+		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+		line-height: 1.6;
+	}
+
+	.hero-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.hero-cta {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		background-color: #ffffff;
+		color: var(--primary);
+		padding: 1rem 2.5rem;
+		border-radius: 9999px;
+		font-size: 1.25rem;
+		font-weight: 700;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		box-shadow:
+			0 4px 6px -1px rgba(0, 0, 0, 0.1),
+			0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	}
+
+	.hero-cta:hover {
+		transform: translateY(-3px);
+		box-shadow:
+			0 10px 15px -3px rgba(0, 0, 0, 0.2),
+			0 4px 6px -2px rgba(0, 0, 0, 0.1);
+		background-color: #fee2e2;
+	}
+
+	.hero-cta-secondary {
+		background-color: rgba(255, 255, 255, 0.15);
+		color: white;
+		border: 2px solid white;
+		backdrop-filter: blur(4px);
+	}
+
+	.hero-cta-secondary:hover {
+		background-color: white;
+		color: var(--primary);
+	}
+
+	.hero-cta svg {
+		width: 24px;
+		height: 24px;
 	}
 
 	.tagline-section {
-		background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 50%, #1e3a8a 100%);
+		background: linear-gradient(
+			90deg,
+			#ea2528 0%,
+			#b91c1c 50%,
+			#ea2528 100%
+		);
 		color: white;
 		padding: 1.5rem;
 		text-align: center;
@@ -336,8 +683,8 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 	}
 	.tagline-section p::before,
 	.tagline-section p::after {
-		content: '✦';
-		color: #93c5fd;
+		content: "✦";
+		color: #fca5a5;
 		font-size: 1rem;
 		margin: 0 1rem;
 		vertical-align: middle;
@@ -379,11 +726,11 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 			font-size: 2rem;
 			font-weight: 800;
 		}
-		
+
 		.hero-section p {
 			font-weight: 400;
 		}
-		
+
 		.category-section h2 {
 			font-weight: 800;
 		}
@@ -407,8 +754,8 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 
 		.tagline-section::before,
 		.tagline-section::after {
-			content: '✦';
-			color: #93c5fd;
+			content: "✦";
+			color: #fca5a5;
 			font-size: 1.2rem;
 			flex-shrink: 0;
 		}
@@ -497,7 +844,9 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 		background: var(--card-bg);
 		padding: 2.5rem;
 		border-radius: 16px;
-		box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+		box-shadow:
+			0 10px 25px -5px rgba(0, 0, 0, 0.05),
+			0 8px 10px -6px rgba(0, 0, 0, 0.01);
 		border: 1px solid rgba(0, 0, 0, 0.05);
 	}
 
@@ -528,9 +877,9 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 	}
 
 	.check-icon {
-		color: #2563eb;
+		color: #ea2528;
 		flex-shrink: 0;
-		background: #eff6ff;
+		background: #fee2e2;
 		padding: 4px;
 		border-radius: 50%;
 	}
@@ -587,15 +936,21 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 		background-color: var(--card-bg);
 		border-radius: 12px;
 		overflow: hidden;
-		box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		box-shadow:
+			0 4px 6px -1px rgb(0 0 0 / 0.1),
+			0 2px 4px -2px rgb(0 0 0 / 0.1);
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
 		position: relative;
 		cursor: pointer;
 	}
 
 	.product-card:hover {
 		transform: translateY(-5px);
-		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+		box-shadow:
+			0 10px 15px -3px rgb(0 0 0 / 0.1),
+			0 4px 6px -4px rgb(0 0 0 / 0.1);
 	}
 
 	.product-card img {
@@ -658,7 +1013,9 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 		align-items: center;
 		justify-content: center;
 		cursor: pointer;
-		transition: background-color 0.2s, transform 0.2s;
+		transition:
+			background-color 0.2s,
+			transform 0.2s;
 	}
 
 	.lightbox-close:hover {
@@ -685,7 +1042,9 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 		align-items: center;
 		justify-content: center;
 		cursor: pointer;
-		transition: background-color 0.2s, transform 0.2s;
+		transition:
+			background-color 0.2s,
+			transform 0.2s;
 		opacity: 0.7;
 		z-index: 10;
 	}
@@ -695,7 +1054,7 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 			width: 40px;
 			height: 40px;
 		}
-		
+
 		.lightbox-close {
 			top: 1rem;
 			right: 1rem;
@@ -750,8 +1109,8 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 		font-size: 1.2rem;
 		margin-bottom: 1.5rem;
 		font-weight: 600;
-		color: #93c5fd;
-		border-bottom: 2px solid #3b82f6;
+		color: #fca5a5;
+		border-bottom: 2px solid #b91c1c;
 		display: inline-block;
 		padding-bottom: 0.5rem;
 	}
@@ -791,7 +1150,7 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 	}
 
 	.footer-links-list a:hover {
-		color: #93c5fd;
+		color: #fca5a5;
 		text-decoration: underline;
 	}
 
@@ -819,7 +1178,7 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 			gap: 1.5rem;
 			margin-bottom: 1.5rem;
 		}
-		
+
 		.footer-column h3 {
 			margin-bottom: 1rem;
 			margin-left: auto;
@@ -832,7 +1191,7 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 	}
 
 	.footer-link {
-		color: #93c5fd;
+		color: #fca5a5;
 		text-decoration: none;
 		transition: color 0.2s;
 	}
@@ -842,12 +1201,17 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 		text-decoration: underline;
 	}
 
-	.whatsapp-btn {
+	.floating-buttons {
 		position: fixed;
 		bottom: 20px;
 		right: 20px;
-		background-color: #25D366;
-		color: white;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		z-index: 1000;
+	}
+
+	.floating-btn {
 		width: 60px;
 		height: 60px;
 		border-radius: 50%;
@@ -855,51 +1219,63 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 		align-items: center;
 		justify-content: center;
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-		z-index: 1000;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		color: white;
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
 	}
 
-	.whatsapp-btn:hover {
+	.floating-btn:hover {
 		transform: scale(1.1);
 		box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+	}
+
+	.whatsapp-btn {
+		background-color: #25d366;
+	}
+
+	.call-btn {
+		background-color: var(--primary);
 	}
 </style>
 
 <script>
-	document.addEventListener('DOMContentLoaded', () => {
+	document.addEventListener("DOMContentLoaded", () => {
 		// Mobile Menu
-		const menuBtn = document.getElementById('menu-btn');
-		const navLinks = document.getElementById('nav-links');
+		const menuBtn = document.getElementById("menu-btn");
+		const navLinks = document.getElementById("nav-links");
 
 		if (menuBtn && navLinks) {
-			menuBtn.addEventListener('click', () => {
-				navLinks.classList.toggle('active');
+			menuBtn.addEventListener("click", () => {
+				navLinks.classList.toggle("active");
 			});
-			
+
 			// Close menu when clicking a link
-			navLinks.querySelectorAll('a').forEach(link => {
-				link.addEventListener('click', () => {
-					navLinks.classList.remove('active');
+			navLinks.querySelectorAll("a").forEach((link) => {
+				link.addEventListener("click", () => {
+					navLinks.classList.remove("active");
 				});
 			});
 		}
 
 		// Lightbox
-		const lightbox = document.getElementById('lightbox');
-		const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
-		const closeBtn = document.querySelector('.lightbox-close');
-		const prevBtn = document.querySelector('.lightbox-prev');
-		const nextBtn = document.querySelector('.lightbox-next');
-		const currentCounter = document.getElementById('lightbox-current');
-		const totalCounter = document.getElementById('lightbox-total');
-		
-		const cards = document.querySelectorAll('.product-card');
+		const lightbox = document.getElementById("lightbox");
+		const lightboxImg = document.getElementById(
+			"lightbox-img",
+		) as HTMLImageElement;
+		const closeBtn = document.querySelector(".lightbox-close");
+		const prevBtn = document.querySelector(".lightbox-prev");
+		const nextBtn = document.querySelector(".lightbox-next");
+		const currentCounter = document.getElementById("lightbox-current");
+		const totalCounter = document.getElementById("lightbox-total");
+
+		const cards = document.querySelectorAll(".product-card");
 		let galleryItems: string[] = [];
 		let currentIndex = 0;
 
 		// Populate gallery items
-		cards.forEach(card => {
-			const src = card.getAttribute('data-src');
+		cards.forEach((card) => {
+			const src = card.getAttribute("data-src");
 			if (src) galleryItems.push(src);
 		});
 
@@ -910,15 +1286,17 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 		function openLightbox(index: number) {
 			currentIndex = index;
 			updateLightbox();
-			lightbox?.classList.add('active');
-			document.body.style.overflow = 'hidden'; // Prevent scrolling
+			lightbox?.classList.add("active");
+			document.body.style.overflow = "hidden"; // Prevent scrolling
 		}
 
 		function closeLightbox() {
-			lightbox?.classList.remove('active');
-			document.body.style.overflow = '';
+			lightbox?.classList.remove("active");
+			document.body.style.overflow = "";
 			// Slight delay before clearing src for smooth transition
-			setTimeout(() => { if (lightboxImg) lightboxImg.src = ''; }, 300);
+			setTimeout(() => {
+				if (lightboxImg) lightboxImg.src = "";
+			}, 300);
 		}
 
 		function updateLightbox() {
@@ -934,32 +1312,39 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 		}
 
 		function prevImage() {
-			currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+			currentIndex =
+				(currentIndex - 1 + galleryItems.length) % galleryItems.length;
 			updateLightbox();
 		}
 
 		cards.forEach((card, index) => {
-			card.addEventListener('click', () => openLightbox(index));
+			card.addEventListener("click", () => openLightbox(index));
 		});
 
-		closeBtn?.addEventListener('click', closeLightbox);
-		nextBtn?.addEventListener('click', (e) => { e.stopPropagation(); nextImage(); });
-		prevBtn?.addEventListener('click', (e) => { e.stopPropagation(); prevImage(); });
+		closeBtn?.addEventListener("click", closeLightbox);
+		nextBtn?.addEventListener("click", (e) => {
+			e.stopPropagation();
+			nextImage();
+		});
+		prevBtn?.addEventListener("click", (e) => {
+			e.stopPropagation();
+			prevImage();
+		});
 
 		// Close on clicking outside the image
-		lightbox?.addEventListener('click', (e) => {
+		lightbox?.addEventListener("click", (e) => {
 			if (e.target === lightbox) {
 				closeLightbox();
 			}
 		});
 
 		// Keyboard navigation
-		document.addEventListener('keydown', (e) => {
-			if (!lightbox?.classList.contains('active')) return;
-			
-			if (e.key === 'Escape') closeLightbox();
-			if (e.key === 'ArrowRight') nextImage();
-			if (e.key === 'ArrowLeft') prevImage();
+		document.addEventListener("keydown", (e) => {
+			if (!lightbox?.classList.contains("active")) return;
+
+			if (e.key === "Escape") closeLightbox();
+			if (e.key === "ArrowRight") nextImage();
+			if (e.key === "ArrowLeft") prevImage();
 		});
 	});
 </script>

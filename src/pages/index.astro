@@ -53,7 +53,7 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 			<div class="brand">
 				<Image
 					src={kcLogo2}
-					alt="Averest Logo - Khosla Coolers Brand"
+					alt="Logo - Khosla Coolers Brand"
 					class="nav-logo"
 					width={200}
 				/>
@@ -95,6 +95,12 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 
 	<section class="hero-poster">
 		<div class="poster-top">
+			<Image
+				src={averestLogo}
+				alt="Averest Logo"
+				class="averest-logo"
+				width={150}
+			/>
 			<Image
 				src={kcLogo}
 				alt="Khosla Coolers Logo"
@@ -612,10 +618,22 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 	.poster-logo {
 		margin: 0 auto;
 		height: auto;
-		max-height: 120px;
+		max-height: 140px;
 		object-fit: contain;
 		position: relative;
+		mix-blend-mode: multiply;
 		z-index: 2;
+	}
+
+	.averest-logo {
+		position: absolute;
+		top: 2rem;
+		left: 2rem;
+		height: auto;
+		max-width: 150px;
+		object-fit: contain;
+		mix-blend-mode: multiply;
+		z-index: 10;
 	}
 
 	.poster-middle {
@@ -834,6 +852,12 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 
 		.poster-top::after {
 			height: 30px;
+		}
+
+		.averest-logo {
+			top: 1rem;
+			left: 1rem;
+			max-width: 80px;
 		}
 
 		.mfg-badge {

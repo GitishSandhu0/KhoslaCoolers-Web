@@ -97,8 +97,14 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 		<div class="poster-top">
 			<Image
 				src={averestLogo}
-				alt="Averest Logo"
-				class="averest-logo"
+				alt="Averest Logo Left"
+				class="averest-logo averest-logo-left"
+				width={150}
+			/>
+			<Image
+				src={averestLogo}
+				alt="Averest Logo Right"
+				class="averest-logo averest-logo-right"
 				width={150}
 			/>
 			<Image
@@ -142,11 +148,7 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 	</section>
 
 	<section class="tagline-section">
-		<p>
-			Delivering you the best quality since <span style="color: #ffd700;"
-				>1996</span
-			>.
-		</p>
+		<p>Delivering you the best Quality</p>
 	</section>
 
 	<main class="container">
@@ -628,12 +630,19 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 	.averest-logo {
 		position: absolute;
 		top: 2rem;
-		left: 2rem;
 		height: auto;
 		max-width: 150px;
 		object-fit: contain;
 		mix-blend-mode: multiply;
 		z-index: 10;
+	}
+
+	.averest-logo-left {
+		left: 2rem;
+	}
+
+	.averest-logo-right {
+		right: 2rem;
 	}
 
 	.poster-middle {
@@ -856,8 +865,15 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 
 		.averest-logo {
 			top: 1rem;
+			max-width: 70px;
+		}
+
+		.averest-logo-left {
 			left: 1rem;
-			max-width: 80px;
+		}
+
+		.averest-logo-right {
+			right: 1rem;
 		}
 
 		.mfg-badge {
@@ -915,6 +931,22 @@ const almirahs = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 			color: #fca5a5;
 			font-size: 1.2rem;
 			flex-shrink: 0;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.averest-logo {
+			max-width: 50px;
+			top: 0.5rem;
+		}
+		.averest-logo-left {
+			left: 0.5rem;
+		}
+		.averest-logo-right {
+			right: 0.5rem;
+		}
+		.poster-top {
+			padding: 1rem 0.5rem 2.5rem;
 		}
 	}
 
